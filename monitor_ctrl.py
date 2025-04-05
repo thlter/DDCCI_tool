@@ -19,7 +19,7 @@ __VERSION__ = '1.0'
 __APP_NAME__ = 'monitor_ctrl'
 __LOGGING_FORMAT = "%(levelname)s:[%(filename)s:%(lineno)s-%(funcName)s()] %(message)s"
 
-DEFAULT_LOGFILE_PATH = os.path.join(os.environ.get('TEMP', './'), __APP_NAME__, 'log.txt')
+DEFAULT_LOGFILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'log.txt')
 _LOGGER = logging.getLogger(__name__)
 
 # -s 参数的分隔符，设置RGB_GAIN的地方需要 eval() 用户输入，使用 [](),等作为分割符会出错
